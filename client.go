@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/libdns/libdns"
-	pdns "github.com/mittwald/go-powerdns"
-	"github.com/mittwald/go-powerdns/apis/zones"
+	pdns "github.com/scopisto/go-powerdns"
+	"github.com/scopisto/go-powerdns/apis/zones"
 )
 
 type client struct {

@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/libdns/libdns"
-	"github.com/mittwald/go-powerdns/apis/zones"
+	"github.com/scopisto/go-powerdns/apis/zones"
 )
 
 func TestPDNSClient(t *testing.T) {

@@ -3,7 +3,7 @@ package powerdns
 import (
 	"context"
 	"fmt"
-	"github.com/libdns/powerdns/txtsanitize"
+	"github.com/scopisto/powerdns/txtsanitize"
 	"io"
 	"strings"
 

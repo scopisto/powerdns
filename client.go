@@ -178,7 +178,7 @@ func (c *client) fullZone(ctx context.Context, zoneName string) (*zones.Zone, er
 
 func (c *client) shortZone(ctx context.Context, zoneName string) (*zones.Zone, error) {
 	zc := c.Zones()
-	shortZones, err := zc.ListZone(ctx, c.sID, zoneName)
+	shortZones, err := zc.ListZone(ctx, c.sID, strings.TrimSuffix(zoneName, "."))
 	if err != nil {
 		return nil, err
 	}

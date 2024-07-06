@@ -182,10 +182,15 @@ func (c *client) shortZone(ctx context.Context, zoneName string) (*zones.Zone, e
 	if err != nil {
 		return nil, err
 	}
-	if len(shortZones) != 1 {
+	if len(shortZones) < 1 {
 		return nil, fmt.Errorf("zone not found")
 	}
-	return &shortZones[0], nil
+	for _, z := range shortZones {
+		if z.Name == zoneName {
+			return &z, nil
+		}
+	}
+	return nil, fmt.Errorf("zone not found")
 }
 
 func (c *client) zoneID(ctx context.Context, zoneName string) (string, error) {
